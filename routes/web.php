@@ -12,7 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return view('blog.index');
+});
+
+Route::get('/blog/show', function () {
+    // return view('welcome');
+    return view('blog.show');
 });
 
 // Second Route method – Root URL with ID will match this method
