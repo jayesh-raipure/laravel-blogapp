@@ -16,10 +16,10 @@ Route::get('/', [
 	'as' => 'blog'
 	]);
 
-Route::get('/blog/show', function () {
-    // return view('welcome');
-    return view('blog.show');
-});
+Route::get('/blog/{post}', [
+	'uses' => 'BlogController@show',
+	'as' => 'blog.show'
+	]);
 
 // Second Route method – Root URL with ID will match this method
 Route::get('ID/{id}',function($id){

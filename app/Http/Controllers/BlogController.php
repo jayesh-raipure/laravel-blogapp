@@ -11,4 +11,10 @@ class BlogController extends Controller
     	$posts = Post::with('author')->latestFirst()->published()->Paginate($this->limit);
     	return view('blog.index', compact('posts'));
     }
+
+    public function show($id)
+    {
+    	$post = Post::findorfail($id);
+    	return view('blog.show', compact('post'));
+    }
 }
