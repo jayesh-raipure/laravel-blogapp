@@ -35,3 +35,6 @@ Route::get('ID/{id}',function($id){
 Route::get('/user/{name?}',function($name = 'Virat Gandhi'){
    echo "Name: ".$name;
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
